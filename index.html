@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (/Mobi|Android|iPhone|iPad|Tablet|iPod/i.test(navigator.userAgent)) {
+            document.documentElement.classList.add('mobile-device');
+        }
+    </script>
+    <title>Skyars ERP — Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Mobile Blocker Screen -->
+    <div id="mobile-blocker-screen">
+        <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h1>PC / Desktop Only</h1>
+        <p>Aap is portal ko mobile ya tablet par open nahi kar sakte. Kripya access karne ke liye apne laptop ya computer ka use karein.</p>
+    </div>
+
+    <div class="login-grid-bg"></div>
+    <div class="login-bg-glow"></div>
+
+    <div class="login-page">
+        <div class="login-card" style="animation: fadeUp 0.5s ease forwards;">
+            <div class="login-header">
+                <div class="login-logo" style="margin-bottom: 24px; display: flex; justify-content: center;">
+                    <img src="logo.png" alt="Skyars ERP" style="max-width: 180px; height: auto; object-fit: contain;">
+                </div>
+                <h1 class="login-title">Welcome back</h1>
+                <p class="login-subtitle">Sign in to access your workspace</p>
+
+            </div>
+
+            <div id="login-error" class="form-error"></div>
+
+            <form id="login-form" autocomplete="off">
+                <div class="form-group">
+                    <label class="form-label" for="login-email">Email Address</label>
+                    <input type="email" id="login-email" class="form-input" placeholder="you@skyars.com" required>
+                </div>
+                <div class="form-group" style="margin-bottom:24px;">
+                    <label class="form-label" for="login-password">Password</label>
+                    <input type="password" id="login-password" class="form-input" placeholder="••••••••" required>
+                </div>
+                <button type="submit" id="login-btn" class="btn-login">Sign In →</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/supabase-config.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
